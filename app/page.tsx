@@ -1,9 +1,9 @@
 "use client";
 
 import Timer from "./components/timer";
-import { Start } from "@/image/start";
-import { Pause } from "@/image/pause";
-import { Stop } from "@/image/stop";
+
+import { PlayIcon, PauseIcon } from "@heroicons/react/24/outline";
+import { StopIcon } from "@heroicons/react/24/solid";
 
 import { useEffect, useState } from "react";
 
@@ -57,18 +57,18 @@ export default function Home() {
         <div className="flex flex-row gap-8 justify-center">
           <div className="swap swap-rotate">
             <input type="checkbox" id="play" />
-            <button className="btn btn-square btn-primary swap-off pointer-events-none">
-              <Start />
+            <button className="btn btn-circle btn-primary btn-lg swap-off pointer-events-none">
+              <PlayIcon className="p-2" />
             </button>
-            <button className="btn btn-square btn-info swap-on pointer-events-none">
-              <Pause />
+            <button className="btn btn-circle btn-info btn-lg swap-on pointer-events-none">
+              <PauseIcon className="p-2" />
             </button>
           </div>
           <button
-            className="btn btn-circle btn-error text-base-300"
+            className="btn btn-circle btn-error btn-lg text-base-300"
             onClick={reset}
           >
-            <Stop />
+            <StopIcon className="p-2" />
           </button>
         </div>
       </div>
